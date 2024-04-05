@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListOfObjects.MainPage">
+
+    <StackLayout>
+
+
+        <Entry x:Name="Stu_id" Placeholder="ID"/>
+        <Entry x:Name="Stu_name" Placeholder="Name"/>
+        <Entry x:Name="Stu_department" Placeholder="Department"/>
+        <Button x:Name="Add_Btn" Text="Add" 
+                Clicked="Add_Btn_Clicked"/>
+
+
+
+
+
+
+
+        <ListView x:Name="Stu_List_View" 
+                  HasUnevenRows="True"
+                  ItemTapped="Stu_List_View_ItemTapped">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+
+                        <StackLayout>
+                            <Label Text="{Binding id}"/>
+                            <Label Text="{Binding name}"/>
+                            <Label Text="{Binding department}"/>
+
+
+                        </StackLayout>
+
+             
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+
+        </ListView>
+
+
+    </StackLayout>
+
+ 
+
+</ContentPage>
